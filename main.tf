@@ -1,12 +1,12 @@
+provider "azurerm" {
+  features {}
+  # Use the subscription_id from terraform.tfvars file or TF_VAR
+  subscription_id = var.subscription_id
+}
+
 variable "subscription_id" {
   description = "The subscription ID to use for the Azure resources"
   type        = string
-}
-
-provider "azurerm" {
-  features {}
-  # Use the subscription_id from terraform.tfvars file
-  subscription_id = var.subscription_id
 }
 
 # Create a Resource Group
